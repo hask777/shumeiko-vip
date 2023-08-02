@@ -3,7 +3,11 @@ from typing import Optional, List
 from pydantic import BaseModel
 from datetime import date
 
+from app.bookings.router import router as router_bookings
+
 app = FastAPI()
+
+app.include_router(router_bookings)
 
 
 class SHotel(BaseModel):

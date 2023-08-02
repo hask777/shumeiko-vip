@@ -12,4 +12,6 @@ class Bookings(Base):
     price = Column(Integer, nullable=False)
     total_coast = Column(Integer, Computed("(date_from - date_to) * price"))
     total_days = Column(Integer, Computed("(date_from - date_to)"))
+
+    
     
